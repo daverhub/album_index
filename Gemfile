@@ -22,7 +22,6 @@ group :development, :test do
   gem 'capybara'
   gem 'factory_girl_rails'
   gem 'byebug'
-  gem 'web-console', '~> 2.0'
   gem 'pry-rails'
   gem 'spring'
 end

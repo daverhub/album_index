@@ -16,21 +16,22 @@ h1
 
         = submit_tag "Search"
 
-
-div
-  - if @songs
-    table
-      thead
-        tr
-          th Song
-          th Artist
-          th Album
-      tbody
-    - @songs.each do |song|
-        tr
-          td = song.title
-          td = song.artist.name
-          td = song.album.title
+- if @songs
+  .box.col-xs-12
+    .table-responsive
+      .cell
+        table.table.table-bordered.table-striped
+          thead
+            tr
+              th Song
+              th Artist
+              th Album
+          tbody
+            - @songs.each do |song|
+              tr
+                td = song.title
+                td = song.artist.name
+                td = song.album.title
 
 
 

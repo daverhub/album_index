@@ -1,4 +1,5 @@
 class SearchesController < ApplicationController
+
   def index
 
     if search_params['song'].present?
