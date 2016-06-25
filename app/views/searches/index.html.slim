@@ -1,0 +1,36 @@
+h1
+  |Search for Songs
+.container-fluid
+  .row 
+    .col-xs-12.col-md-6
+      = form_tag searches_path, method: :get do 
+
+        = label_tag 'Aritst'
+        = text_field_tag :artist
+
+        = label_tag 'Album'
+        = text_field_tag :album
+
+        = label_tag 'Song'
+        = text_field_tag :song
+
+        = submit_tag "Search"
+
+
+div
+  - if @songs
+    table
+      thead
+        tr
+          th Song
+          th Artist
+          th Album
+      tbody
+    - @songs.each do |song|
+        tr
+          td = song.title
+          td = song.artist.name
+          td = song.album.title
+
+
+
