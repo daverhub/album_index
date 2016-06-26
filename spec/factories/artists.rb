@@ -1,7 +1,6 @@
 FactoryGirl.define do
   factory :artist do
-    name "MyString"
-genre "MyString"
+    name "Adele"
+    genre "Pop"
   end
-
 end

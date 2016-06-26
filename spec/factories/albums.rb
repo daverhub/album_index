@@ -1,8 +1,8 @@
 FactoryGirl.define do
   factory :album do
-    title "MyString"
-genre "MyString"
-artist_id 1
+    title "Adele 21"
+    genre "Pop"
+    artist_id 1
   end
 
 end
