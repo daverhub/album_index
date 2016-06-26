@@ -33,6 +33,7 @@ class SearchesController < ApplicationController
         @album = Album.search(search_params['album'])
         @songs = Song.joins(:album).where('album_id' => @album)
     end
+    @songs= @songs.order("title").page(params[:page]).per(20)
   end
 
 

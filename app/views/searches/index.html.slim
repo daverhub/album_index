@@ -1,6 +1,4 @@
 .container#app
-
-
   .container-fluid
     .row.centered
       .col-sm-12
@@ -39,6 +37,8 @@
                         td = song.title
                         td = song.artist.name
                         td = song.album.title
+
+          = paginate @songs
 
 
 
