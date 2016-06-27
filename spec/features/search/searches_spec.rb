@@ -47,7 +47,7 @@ feature "user searches for songs" do
     fill_in :song, with: "Hello"
     click_button "Search"
 
-    expect(page).to have_content("No Matches Found")
+    expect(page).to have_content("No matches found, please enter artist, song, or album")
   end
   
   scenario "fails to find by artist" do
@@ -56,7 +56,7 @@ feature "user searches for songs" do
     fill_in :song, with: "Sting"
     click_button "Search"
 
-    expect(page).to have_content("No Matches Found")
+    expect(page).to have_content("No matches found, please enter artist, song, or album")
   end
 
   scenario "fails to find by album" do
@@ -65,7 +65,7 @@ feature "user searches for songs" do
     fill_in :song, with: "Traveller"
     click_button "Search"
 
-    expect(page).to have_content("No Matches Found")
+    expect(page).to have_content("No matches found, please enter artist, song, or album")
   end
 
 end

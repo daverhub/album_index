@@ -29,11 +29,16 @@ class SearchesController < ApplicationController
         @songs = @songs.joins(:album).where('album_id' => @album)
       end
     
-    else search_params['album'].present?
+    elsif search_params['album'].present?
         @album = Album.search(search_params['album'])
         @songs = Song.joins(:album).where('album_id' => @album)
     end
-    @songs= @songs.order("title").page(params[:page]).per(20)
+
+    if @songs
+      @songs= @songs.order("title").page(params[:page]).per(20)
+    elsif
+      flash[:notice] = 'No matches found, please enter artist, song, or album'
+    end
   end
 
 
