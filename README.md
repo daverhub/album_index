@@ -4,3 +4,5 @@
 
 - Clone repo
 - run ``` rake db:seed``` to populate database
+
+
